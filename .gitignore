@@ -1,52 +1,61 @@
-# Prerequisites
-*.d
+#include<stdio.h>
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+int main() {
+    int password=1234;
+    int BUDGET=100;
+    int wantedpassword;
+    int hata=0;
+    int choose;
+    int amount to be invest;
+    do {
+        printf("Hello welcome the bank\n\n please enter the password:");
+        scanf("%d" , &wantedpassword);
+        hata++;
+    }
+    while(hata<3 && (password!=wantedpassword));
+    if(password==wantedpassword){
+        printf("password is correct\n\n");
+        while(1==1){
+            printf("You have to choose downstairs actions\n:");
+            printf("\n[1]-Investment");
+            printf("\n[2]-Withdrawal");
+            printf("\n[3]-Current account limit");
+            printf("\n[4]-Exit\n");
+            if(choose==1){
+                printf("\n How much money do you want invest:);
+                       scanf("&d" , &amount to be invest);
+                       budget=budget+amount to be invest;
+                       printf("\n----------------------------\n");
+                       print("Your money is has invested\nMoney which is your invested:&d\ncurrent budget:%d" , amount to be invest,budget);
+                       printf("\n--------------------\n");
+            }
+                       if(choose==2){
+                    printf("\n How much money do you want to take:");
+                    scanf("&d" , &money which is taken);
+                    if(money which is taken < budget) {
+                        budget=budget-money which is taken;
+                        printf("\n-------------------\n");
+                        printf("Your money has withdrawal\nthe amount you withdraw:%d\ncurrent budget:%d" , will be withdraw,budget);
+                        printf("\n----------------\n");
+                    }
+                    else
+                        printf("\ninsufficient balance\n\n");
+                }
+        }
+    }
+    else 
+    { // 3 veyahut 3den fazla hatali  sifre girilirse */
+        printf("\n\n You tried 3 or more than 3 times entire password You are logged out");
+}
+                       if(choose==3) {
+                    printf("\n---------------\n");
+                    printf("\n\ncurrent budget:%d" , budget);
+                    printf("\n---------------\n");
+                }
+                       if(choose==4) {
+                    break;
+                    }
+}
+                       return 0;
+                       }
 
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
